@@ -1,0 +1,5 @@
+#!/bin/bash
+# Recupere la consommation electrique
+conso=$(curl -X GET 192.168.33.1/meter/0 --silent | jq .power)
+# Affiche la conso
+echo -e "Consommation actuelle de la prise : $conso\n"
