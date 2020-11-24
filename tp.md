@@ -1,4 +1,8 @@
-<div style="text-align:center"><img src="./fleur.png" alt="flower" style="zoom:35%;" /></div>
+<div style="text-align:center"><img src="../ido/fleur.png" alt="flower" style="zoom:35%;" /></div>
+
+
+
+**GERARDIN Clemence**
 
 
 
@@ -7,6 +11,12 @@
 # REST : TP
 
 ---
+
+
+
+**Repo GIT** : https://github.com/wyqhael/tp_rest/
+
+
 
 ## Sommaire
 
@@ -134,7 +144,7 @@ L’échange HTTP se fait en 2 trames :
 - La trame qui contient la requête "GET", envoyée par le client
 - Une réponse en **json**, envoyée par le prise.
 
-Sur wireshark on va dans le section **HTTP** > **GET**, on sélectionne le champs `Request URI Query Parameter: turn=on `, elle fait *7 bytes*, soit *7 octets*
+
 
 
 
@@ -155,7 +165,11 @@ Date:   Tue Nov 24 13:27:30 2020 +0100
     compte-rendu a jour
 ```
 
+On push le tag :
 
+``` shell
+$ git push --tag 
+```
 
 
 
@@ -200,3 +214,36 @@ On crée 3 scripts :
 - off qui éteint la prise
 - toggle qui bascule la prise dans L’état inverse
 - status qui qui s'abonne au topic pour voir les états de la prise
+
+
+
+
+
+### Tag sur le dernier commit
+
+``` shell
+$ git tag "partie_2"
+```
+
+On push le tag :
+
+``` shell
+$ git push --tag
+```
+
+
+
+
+
+
+
+## Serveur REST
+
+``` shell
+$ apt install ngnix
+$ systemctl start ngnix
+```
+
+Le fichier de configuration se trouve dans : `/etc/nginx/nginx.conf`.
+
+On modifie la config pour avoir la page php quand on arrive sur **NGINX**.
