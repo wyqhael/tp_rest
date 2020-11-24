@@ -174,4 +174,25 @@ fi
 
 ### Échanges HTTP 
 
-L'echange HTTP
+L’échange HTTP se fait en 2 trames :
+
+- La trame qui contient la requête "GET", envoyée par le client
+- Une réponse en **json**, envoyée par le prise.
+
+Sur wireshark on va dans le section **HTTP** > **GET**, on sélectionne le champs `Request URI Query Parameter: turn=on `, elle fait *7 bytes*, soit *7 octets*
+
+
+
+### Tag sur le dernier commit
+
+``` shell
+$ git tag "partie_1" <num commit>
+```
+
+
+
+
+
+
+
+## MQTT
