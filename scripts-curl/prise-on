@@ -1,0 +1,21 @@
+#!/bin/bash
+addr1=10.202.255.252
+addr2=10.202.255.253
+curl http://$addr1/relay/0?turn=on --silent
+curl http://$addr2/relay/0?turn=on --silent
+# Affiche l'etat de la prise pour s'assurer qu'elle est allumee
+etat1=$(curl http://$addr1/relay/0?turn=on --silent | jq .ison)
+etat2=$(curl http://$addr2/relay/0?turn=on --silent | jq .ison)
+# Affiche l'etat de la prise apres l'allumage, si l'etat n'est pas a true previent que le script ne s'est pas bien execute
+if [ "$etat1" == "true" ]
+then
+	echo -e "\nLa prise 1 est allumee\n"
+else
+	echo -e "\nLa prise 1 ne s'est pas bien allumee"
+fi
+if [ "$etat2" == "true" ]
+then
+	echo -e "\nLa prise 2 est allumee\n"
+else
+	echo -e "\nLa prise 2 ne s'est pas bien allumee"
+fi

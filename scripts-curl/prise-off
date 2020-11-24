@@ -1,0 +1,21 @@
+#!/bin/bash
+addr1=10.202.255.252
+addr2=10.202.255.253
+curl http://$addr1/relay/0?turn=off --silent
+curl http://$addr2/relay/0?turn=off --silent
+# Affiche l'etat de la prise pour s'assurer qu'elle est eteinte
+etat1=$(curl http://$addr1/relay/0?turn=off --silent | jq .ison)
+etat2=$(curl http://$addr2/relay/0?turn=off --silent | jq .ison)
+# Affiche l'etat de la prise apres l'qvoir eteinte, si l'etat n'est pas a false previent que le script ne s'est pas bien execute
+if [ "$etat1" == "false" ]
+then
+	echo -e "\nLa prise 1 est eteinte\n"
+else
+	echo -e "\nLa prise 1 ne s'est pas bien eteinte"
+fi
+if [ "$etat2" == "false" ]
+then
+	echo -e "\nLa prise 2 est eteinte\n"
+else
+	echo -e "\nLa prise 2 ne s'est pas bien eteinte"
+fi
