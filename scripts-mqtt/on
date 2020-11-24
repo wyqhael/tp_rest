@@ -1,0 +1,4 @@
+#!/bin/bash
+broker=10.202.0.107
+topic=shellies/shellyplug-s-6A6534/relay/0/command
+mosquitto_pub -h $broker -t $topic -m "on"
