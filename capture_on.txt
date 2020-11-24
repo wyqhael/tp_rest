@@ -1,0 +1,481 @@
+No.     Time           Source                Destination           Protocol Length Info
+     10 36.716972163   192.168.33.5          192.168.33.1          HTTP     145    GET /relay/0?turn=on HTTP/1.1 
+
+Frame 10: 145 bytes on wire (1160 bits), 145 bytes captured (1160 bits) on interface wlp0s20f3, id 0
+    Interface id: 0 (wlp0s20f3)
+        Interface name: wlp0s20f3
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Nov 24, 2020 11:48:23.020153500 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1606214903.020153500 seconds
+    [Time delta from previous captured frame: 0.000096313 seconds]
+    [Time delta from previous displayed frame: 0.000000000 seconds]
+    [Time since reference or first frame: 36.716972163 seconds]
+    Frame Number: 10
+    Frame Length: 145 bytes (1160 bits)
+    Capture Length: 145 bytes (1160 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp:http]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80 || http2]
+Ethernet II, Src: IntelCor_78:c9:d6 (18:26:49:78:c9:d6), Dst: ee:fa:bc:6a:65:34 (ee:fa:bc:6a:65:34)
+    Destination: ee:fa:bc:6a:65:34 (ee:fa:bc:6a:65:34)
+        Address: ee:fa:bc:6a:65:34 (ee:fa:bc:6a:65:34)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: IntelCor_78:c9:d6 (18:26:49:78:c9:d6)
+        Address: IntelCor_78:c9:d6 (18:26:49:78:c9:d6)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.33.5, Dst: 192.168.33.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 131
+    Identification: 0xaad7 (43735)
+    Flags: 0x40, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0xcc46 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.33.5
+    Destination Address: 192.168.33.1
+Transmission Control Protocol, Src Port: 40522, Dst Port: 80, Seq: 1, Ack: 1, Len: 91
+    Source Port: 40522
+    Destination Port: 80
+    [Stream index: 0]
+    [TCP Segment Len: 91]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 230599927
+    [Next Sequence Number: 92    (relative sequence number)]
+    Acknowledgment Number: 1    (relative ack number)
+    Acknowledgment number (raw): 47820
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 64480
+    [Calculated window size: 64480]
+    [Window size scaling factor: -2 (no window scaling used)]
+    Checksum: 0xc3cc [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [SEQ/ACK analysis]
+        [iRTT: 0.003195396 seconds]
+        [Bytes in flight: 91]
+        [Bytes sent since last PSH flag: 91]
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.003291709 seconds]
+        [Time since previous frame in this TCP stream: 0.000096313 seconds]
+    TCP payload (91 bytes)
+Hypertext Transfer Protocol
+    GET /relay/0?turn=on HTTP/1.1\r\n
+        [Expert Info (Chat/Sequence): GET /relay/0?turn=on HTTP/1.1\r\n]
+            [GET /relay/0?turn=on HTTP/1.1\r\n]
+            [Severity level: Chat]
+            [Group: Sequence]
+        Request Method: GET
+        Request URI: /relay/0?turn=on
+            Request URI Path: /relay/0
+            Request URI Query: turn=on
+                Request URI Query Parameter: turn=on
+        Request Version: HTTP/1.1
+    Host: 192.168.33.1\r\n
+    User-Agent: curl/7.73.0\r\n
+    Accept: */*\r\n
+    \r\n
+    [Full request URI: http://192.168.33.1/relay/0?turn=on]
+    [HTTP request 1/1]
+    [Response in frame: 11]
+
+No.     Time           Source                Destination           Protocol Length Info
+     11 36.733435359   192.168.33.1          192.168.33.5          HTTP/JSON 290    HTTP/1.1 200 OK , JavaScript Object Notation (application/json)
+
+Frame 11: 290 bytes on wire (2320 bits), 290 bytes captured (2320 bits) on interface wlp0s20f3, id 0
+    Interface id: 0 (wlp0s20f3)
+        Interface name: wlp0s20f3
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Nov 24, 2020 11:48:23.036616696 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1606214903.036616696 seconds
+    [Time delta from previous captured frame: 0.016463196 seconds]
+    [Time delta from previous displayed frame: 0.016463196 seconds]
+    [Time since reference or first frame: 36.733435359 seconds]
+    Frame Number: 11
+    Frame Length: 290 bytes (2320 bits)
+    Capture Length: 290 bytes (2320 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp:http:json]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80 || http2]
+Ethernet II, Src: ee:fa:bc:6a:65:34 (ee:fa:bc:6a:65:34), Dst: IntelCor_78:c9:d6 (18:26:49:78:c9:d6)
+    Destination: IntelCor_78:c9:d6 (18:26:49:78:c9:d6)
+        Address: IntelCor_78:c9:d6 (18:26:49:78:c9:d6)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: ee:fa:bc:6a:65:34 (ee:fa:bc:6a:65:34)
+        Address: ee:fa:bc:6a:65:34 (ee:fa:bc:6a:65:34)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.33.1, Dst: 192.168.33.5
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 276
+    Identification: 0x0379 (889)
+    Flags: 0x00
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    Fragment Offset: 0
+    Time to Live: 255
+    Protocol: TCP (6)
+    Header Checksum: 0xf413 [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.33.1
+    Destination Address: 192.168.33.5
+Transmission Control Protocol, Src Port: 80, Dst Port: 40522, Seq: 1, Ack: 92, Len: 236
+    Source Port: 80
+    Destination Port: 40522
+    [Stream index: 0]
+    [TCP Segment Len: 236]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 47820
+    [Next Sequence Number: 237    (relative sequence number)]
+    Acknowledgment Number: 92    (relative ack number)
+    Acknowledgment number (raw): 230600018
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 2053
+    [Calculated window size: 2053]
+    [Window size scaling factor: -2 (no window scaling used)]
+    Checksum: 0x4589 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 10]
+        [The RTT to ACK the segment was: 0.016463196 seconds]
+        [iRTT: 0.003195396 seconds]
+        [Bytes in flight: 236]
+        [Bytes sent since last PSH flag: 236]
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.019754905 seconds]
+        [Time since previous frame in this TCP stream: 0.016463196 seconds]
+    TCP payload (236 bytes)
+Hypertext Transfer Protocol
+    HTTP/1.1 200 OK\r\n
+        [Expert Info (Chat/Sequence): HTTP/1.1 200 OK\r\n]
+            [HTTP/1.1 200 OK\r\n]
+            [Severity level: Chat]
+            [Group: Sequence]
+        Response Version: HTTP/1.1
+        Status Code: 200
+        [Status Code Description: OK]
+        Response Phrase: OK
+    Server: Mongoose/6.11\r\n
+    Connection: close\r\n
+    Content-Type: application/json\r\n
+    Content-Length: 122\r\n
+        [Content length: 122]
+    \r\n
+    [HTTP response 1/1]
+    [Time since request: 0.016463196 seconds]
+    [Request in frame: 10]
+    [Request URI: http://192.168.33.1/relay/0?turn=on]
+    File Data: 122 bytes
+JavaScript Object Notation: application/json
+    Object
+        Member Key: ison
+            True value
+            Key: ison
+        Member Key: has_timer
+            False value
+            Key: has_timer
+        Member Key: timer_started
+            Number value: 0
+            Key: timer_started
+        Member Key: timer_duration
+            Number value: 0
+            Key: timer_duration
+        Member Key: timer_remaining
+            Number value: 0
+            Key: timer_remaining
+        Member Key: overpower
+            False value
+            Key: overpower
+        Member Key: source
+            String value: http
+            Key: source
+
+No.     Time           Source                Destination           Protocol Length Info
+     20 36.750050866   192.168.33.5          192.168.33.1          HTTP     145    GET /relay/0?turn=on HTTP/1.1 
+
+Frame 20: 145 bytes on wire (1160 bits), 145 bytes captured (1160 bits) on interface wlp0s20f3, id 0
+    Interface id: 0 (wlp0s20f3)
+        Interface name: wlp0s20f3
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Nov 24, 2020 11:48:23.053232203 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1606214903.053232203 seconds
+    [Time delta from previous captured frame: 0.000201935 seconds]
+    [Time delta from previous displayed frame: 0.016615507 seconds]
+    [Time since reference or first frame: 36.750050866 seconds]
+    Frame Number: 20
+    Frame Length: 145 bytes (1160 bits)
+    Capture Length: 145 bytes (1160 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp:http]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80 || http2]
+Ethernet II, Src: IntelCor_78:c9:d6 (18:26:49:78:c9:d6), Dst: ee:fa:bc:6a:65:34 (ee:fa:bc:6a:65:34)
+    Destination: ee:fa:bc:6a:65:34 (ee:fa:bc:6a:65:34)
+        Address: ee:fa:bc:6a:65:34 (ee:fa:bc:6a:65:34)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: IntelCor_78:c9:d6 (18:26:49:78:c9:d6)
+        Address: IntelCor_78:c9:d6 (18:26:49:78:c9:d6)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.33.5, Dst: 192.168.33.1
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 131
+    Identification: 0x57f0 (22512)
+    Flags: 0x40, Don't fragment
+        0... .... = Reserved bit: Not set
+        .1.. .... = Don't fragment: Set
+        ..0. .... = More fragments: Not set
+    Fragment Offset: 0
+    Time to Live: 64
+    Protocol: TCP (6)
+    Header Checksum: 0x1f2e [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.33.5
+    Destination Address: 192.168.33.1
+Transmission Control Protocol, Src Port: 40524, Dst Port: 80, Seq: 1, Ack: 1, Len: 91
+    Source Port: 40524
+    Destination Port: 80
+    [Stream index: 1]
+    [TCP Segment Len: 91]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 830686219
+    [Next Sequence Number: 92    (relative sequence number)]
+    Acknowledgment Number: 1    (relative ack number)
+    Acknowledgment number (raw): 48312
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 64480
+    [Calculated window size: 64480]
+    [Window size scaling factor: -2 (no window scaling used)]
+    Checksum: 0xc3cc [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [SEQ/ACK analysis]
+        [iRTT: 0.002041131 seconds]
+        [Bytes in flight: 91]
+        [Bytes sent since last PSH flag: 91]
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.002243066 seconds]
+        [Time since previous frame in this TCP stream: 0.000201935 seconds]
+    TCP payload (91 bytes)
+Hypertext Transfer Protocol
+    GET /relay/0?turn=on HTTP/1.1\r\n
+        [Expert Info (Chat/Sequence): GET /relay/0?turn=on HTTP/1.1\r\n]
+            [GET /relay/0?turn=on HTTP/1.1\r\n]
+            [Severity level: Chat]
+            [Group: Sequence]
+        Request Method: GET
+        Request URI: /relay/0?turn=on
+            Request URI Path: /relay/0
+            Request URI Query: turn=on
+                Request URI Query Parameter: turn=on
+        Request Version: HTTP/1.1
+    Host: 192.168.33.1\r\n
+    User-Agent: curl/7.73.0\r\n
+    Accept: */*\r\n
+    \r\n
+    [Full request URI: http://192.168.33.1/relay/0?turn=on]
+    [HTTP request 1/1]
+    [Response in frame: 21]
+
+No.     Time           Source                Destination           Protocol Length Info
+     21 36.764832895   192.168.33.1          192.168.33.5          HTTP/JSON 290    HTTP/1.1 200 OK , JavaScript Object Notation (application/json)
+
+Frame 21: 290 bytes on wire (2320 bits), 290 bytes captured (2320 bits) on interface wlp0s20f3, id 0
+    Interface id: 0 (wlp0s20f3)
+        Interface name: wlp0s20f3
+    Encapsulation type: Ethernet (1)
+    Arrival Time: Nov 24, 2020 11:48:23.068014232 CET
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1606214903.068014232 seconds
+    [Time delta from previous captured frame: 0.014782029 seconds]
+    [Time delta from previous displayed frame: 0.014782029 seconds]
+    [Time since reference or first frame: 36.764832895 seconds]
+    Frame Number: 21
+    Frame Length: 290 bytes (2320 bits)
+    Capture Length: 290 bytes (2320 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: eth:ethertype:ip:tcp:http:json]
+    [Coloring Rule Name: HTTP]
+    [Coloring Rule String: http || tcp.port == 80 || http2]
+Ethernet II, Src: ee:fa:bc:6a:65:34 (ee:fa:bc:6a:65:34), Dst: IntelCor_78:c9:d6 (18:26:49:78:c9:d6)
+    Destination: IntelCor_78:c9:d6 (18:26:49:78:c9:d6)
+        Address: IntelCor_78:c9:d6 (18:26:49:78:c9:d6)
+        .... ..0. .... .... .... .... = LG bit: Globally unique address (factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Source: ee:fa:bc:6a:65:34 (ee:fa:bc:6a:65:34)
+        Address: ee:fa:bc:6a:65:34 (ee:fa:bc:6a:65:34)
+        .... ..1. .... .... .... .... = LG bit: Locally administered address (this is NOT the factory default)
+        .... ...0 .... .... .... .... = IG bit: Individual address (unicast)
+    Type: IPv4 (0x0800)
+Internet Protocol Version 4, Src: 192.168.33.1, Dst: 192.168.33.5
+    0100 .... = Version: 4
+    .... 0101 = Header Length: 20 bytes (5)
+    Differentiated Services Field: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        0000 00.. = Differentiated Services Codepoint: Default (0)
+        .... ..00 = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    Total Length: 276
+    Identification: 0x037d (893)
+    Flags: 0x00
+        0... .... = Reserved bit: Not set
+        .0.. .... = Don't fragment: Not set
+        ..0. .... = More fragments: Not set
+    Fragment Offset: 0
+    Time to Live: 255
+    Protocol: TCP (6)
+    Header Checksum: 0xf40f [validation disabled]
+    [Header checksum status: Unverified]
+    Source Address: 192.168.33.1
+    Destination Address: 192.168.33.5
+Transmission Control Protocol, Src Port: 80, Dst Port: 40524, Seq: 1, Ack: 92, Len: 236
+    Source Port: 80
+    Destination Port: 40524
+    [Stream index: 1]
+    [TCP Segment Len: 236]
+    Sequence Number: 1    (relative sequence number)
+    Sequence Number (raw): 48312
+    [Next Sequence Number: 237    (relative sequence number)]
+    Acknowledgment Number: 92    (relative ack number)
+    Acknowledgment number (raw): 830686310
+    0101 .... = Header Length: 20 bytes (5)
+    Flags: 0x018 (PSH, ACK)
+        000. .... .... = Reserved: Not set
+        ...0 .... .... = Nonce: Not set
+        .... 0... .... = Congestion Window Reduced (CWR): Not set
+        .... .0.. .... = ECN-Echo: Not set
+        .... ..0. .... = Urgent: Not set
+        .... ...1 .... = Acknowledgment: Set
+        .... .... 1... = Push: Set
+        .... .... .0.. = Reset: Not set
+        .... .... ..0. = Syn: Not set
+        .... .... ...0 = Fin: Not set
+        [TCP Flags: ·······AP···]
+    Window: 2053
+    [Calculated window size: 2053]
+    [Window size scaling factor: -2 (no window scaling used)]
+    Checksum: 0x88c2 [unverified]
+    [Checksum Status: Unverified]
+    Urgent Pointer: 0
+    [SEQ/ACK analysis]
+        [This is an ACK to the segment in frame: 20]
+        [The RTT to ACK the segment was: 0.014782029 seconds]
+        [iRTT: 0.002041131 seconds]
+        [Bytes in flight: 236]
+        [Bytes sent since last PSH flag: 236]
+    [Timestamps]
+        [Time since first frame in this TCP stream: 0.017025095 seconds]
+        [Time since previous frame in this TCP stream: 0.014782029 seconds]
+    TCP payload (236 bytes)
+Hypertext Transfer Protocol
+    HTTP/1.1 200 OK\r\n
+        [Expert Info (Chat/Sequence): HTTP/1.1 200 OK\r\n]
+            [HTTP/1.1 200 OK\r\n]
+            [Severity level: Chat]
+            [Group: Sequence]
+        Response Version: HTTP/1.1
+        Status Code: 200
+        [Status Code Description: OK]
+        Response Phrase: OK
+    Server: Mongoose/6.11\r\n
+    Connection: close\r\n
+    Content-Type: application/json\r\n
+    Content-Length: 122\r\n
+        [Content length: 122]
+    \r\n
+    [HTTP response 1/1]
+    [Time since request: 0.014782029 seconds]
+    [Request in frame: 20]
+    [Request URI: http://192.168.33.1/relay/0?turn=on]
+    File Data: 122 bytes
+JavaScript Object Notation: application/json
+    Object
+        Member Key: ison
+            True value
+            Key: ison
+        Member Key: has_timer
+            False value
+            Key: has_timer
+        Member Key: timer_started
+            Number value: 0
+            Key: timer_started
+        Member Key: timer_duration
+            Number value: 0
+            Key: timer_duration
+        Member Key: timer_remaining
+            Number value: 0
+            Key: timer_remaining
+        Member Key: overpower
+            False value
+            Key: overpower
+        Member Key: source
+            String value: http
+            Key: source
