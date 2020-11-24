@@ -119,56 +119,11 @@ La prise est éteinte donc on a une valeur de 0.
 
 ### Scripts
 
-Consommation de la Prise 1 :
+On cree 3 scripts :
 
-``` shell
-#!/bin/bash
-# Recupere la consommation electrique
-conso=$(curl -X GET 192.168.33.1/meter/0 --silent | jq .power)
-# Affiche la conso
-echo -e "Consommation actuelle de la prise : $conso\n"
-```
-
-On lance le script :
-
-``` shell
-$ ./p1-info 
-Consommation actuelle de la prise : 0
-```
-
-
-
-Allumer la prise :
-
-``` shell
-#!/bin/bash
-curl http://192.168.33.1/relay/0?turn=on --silent
-# Affiche l'etat de la prise pour s'assurer qu'elle est allumee
-etat=$(curl http://192.168.33.1/relay/0?turn=on --silent | jq .ison)
-# Affiche l'etat de la prise apres l'allumage, si l'etat n'est pas a true previent que le script ne s'est pas bien execute
-if [ "$etat" == "true" ]
-then
-	echo -e "\nLa prise est allumee\n"
-else
-	echo -e "\nLa prise ne s'est pas bien allumee"
-fi
-```
-
-Eteindre la prise :
-
-```shell
-#!/bin/bash
-curl http://192.168.33.1/relay/0?turn=off --silent
-# Affiche l'etat de la prise pour s'assurer qu'elle est allumee
-etat=$(curl http://192.168.33.1/relay/0?turn=off --silent | jq .ison)
-# Affiche l'etat de la prise apres l'avoir eteinte, si l'etat n'est pas a false previent que le script ne s'est pas bien execute
-if [ "$etat" == "false" ]
-then
-	echo -e "\nLa prise est eteinte\n"
-else
-	echo -e "\nLa prise ne s'est pas bien eteinte"
-fi
-```
+- info-prise qui retourne la consommation de la prise
+- prise-on qui allume la prise et retourne son état (pour debugger)
+- prise-off qui éteint la prise et retourne son état (pour debugger)
 
 
 
@@ -186,7 +141,18 @@ Sur wireshark on va dans le section **HTTP** > **GET**, on sélectionne le champ
 ### Tag sur le dernier commit
 
 ``` shell
-$ git tag "partie_1" <num commit>
+$ git tag "partie_1" 0152ee2361985c648bbcb0da815364ce6a7bdc57
+```
+
+On peut voir le tag avec `git log` :
+
+``` shell
+$ git log
+commit 0152ee2361985c648bbcb0da815364ce6a7bdc57 (HEAD -> master, tag: partie_1, origin/master)
+Author: wyqhael <turashusama@gmail.com>
+Date:   Tue Nov 24 13:27:30 2020 +0100
+
+    compte-rendu a jour
 ```
 
 
@@ -195,4 +161,42 @@ $ git tag "partie_1" <num commit>
 
 
 
+
+
 ## MQTT
+
+Le broker est a l'adresse `10.202.0.107`.
+
+``` shell
+$ mosquitto_pub -h 10.202.0.107 -t shellies/shellyplug-s-6A6534/relay/0/command -l
+off
+on
+```
+
+La prise s’éteint et s'allume waho.
+
+Quand on se s'abonne au topic on voit :
+
+``` shell
+$ mosquitto_sub -h 10.202.0.107 -t shellies/#
+off
+0.00
+236
+29.29
+84.73
+0
+on
+off
+off
+```
+
+
+
+### Scripts
+
+On crée 3 scripts :
+
+- on qui allume la prise
+- off qui éteint la prise
+- toggle qui bascule la prise dans L’état inverse
+- status qui qui s'abonne au topic pour voir les états de la prise
